@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Grade Up | Tutoring in Lebanon</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #f4f7fb;
+  color: #1e2a38;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10%;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+header img {
+  height: 130px;
+  transition: all 0.3s ease;
+}
+
+header.shrink {
+  padding: 8px 10%;
+}
+
+header.shrink img {
+  height: 90px;
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #1e2a38;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+nav a:hover {
+  color: #0d4c6b;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 10%;
+  flex-wrap: wrap;
+  background: linear-gradient(to right, #eaf3ff, #ffffff);
+}
+
+.hero-text {
+  max-width: 500px;
+}
+
+.hero-text h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.hero img {
+  width: 400px;
+  border-radius: 15px;
+}
+
+.btn {
+  background: #0d4c6b;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+/* SECTIONS */
+.section {
+  padding: 80px 10%;
+}
+
+.section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* SERVICES */
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* CENTER TEXT */
+.center {
+  text-align: center;
+  max-width: 700px;
+  margin: auto;
+  color: #555;
+}
+
+/* FOOTER */
+footer {
+  background: #0d4c6b;
+  color: white;
+  text-align: center;
+  padding: 25px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.footer-content img {
+  height: 120px;
+}
+
+.footer-content a {
+  color: white;
+  text-decoration: none;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <img src="logo.png">
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="find-tutor.html">Find a Tutor</a>
+  
+    <a href="become-tutor.html">Become a Tutor</a>
+    
+    <a href="terms.html">Terms & Conditions</a>
+    <a href="contact.html">Contact Us</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-text">
+    <h1>Lebanon’s First Student-Powered Tutoring Platform</h1>
+    <p>Grade Up connects students with top-performing peers to make learning easier, faster, and more relatable.</p>
+    <a href="find-tutor.html" class="btn">Find a Tutor</a>
+  </div>
+
+  <img src="hero.jpeg">
+</section>
+
+<section class="section">
+  <h2>Why Choose Grade Up?</h2>
+  <p class="center">
+    We are the first Lebanese platform built by students, for students. 
+    Our tutors understand your struggles because they recently went through them — making explanations clearer and more effective.
+  </p>
+</section>
+
+<section class="section">
+  <h2>Our Services</h2>
+
+  <div class="services">
+
+    <div class="card">
+      <img src="students.png">
+      <h3>Private Tutoring</h3>
+      <p>Personalized sessions tailored to your level and goals. Have face to face interactions with your turtor, easing the tutoring experience!</p>
+    </div>
+
+    <div class="card">
+      <img src="online.png">
+      <h3>Online Sessions</h3>
+      <p>Flexible learning from anywhere in Lebanon.</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="section">
+  <h2>Students Teaching Students</h2>
+  <p class="center">
+    Learning becomes easier when taught by someone who recently mastered the same subject. 
+    Our tutors simplify complex ideas into clear, relatable explanations.
+  </p>
+</section>
+
+<section class="section">
+  <h2>Our Mission</h2>
+  <p class="center">
+    We carefully select tutors based on communication skills, personality, and teaching ability — not just grades. 
+    This ensures every student gets the best learning experience possible.
+  </p>
+</section>
+
+<footer>
+  <div class="footer-content">
+    <img src="logo.png">
+    <a href="mailto:info@gradeuplb.online">info@gradeuplb.online</a>
+  </div>
+
+  <p>© 2026 Grade Up | Lebanon</p>
+</footer>
+
+<script>
+window.addEventListener("scroll", function () {
+  const header = document.querySelector("header");
+
+  if (window.scrollY > 50) {
+    header.classList.add("shrink");
+  } else {
+    header.classList.remove("shrink");
+  }
+});
+</script>
+
+</body>
+</html>

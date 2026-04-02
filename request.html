@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Request Tutor | Grade Up</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+body { font-family: 'Poppins', sans-serif; background: #f4f7fb; color: #1e2a38; margin:0; padding:0; }
+header { display:flex; justify-content:space-between; align-items:center; padding:15px 10%; background:white; position:sticky; top:0; z-index:1000; }
+header img { height:80px; }
+nav a { margin-left:20px; text-decoration:none; color:#1e2a38; }
+.hero { text-align:center; padding:60px 10%; background: linear-gradient(to right, #eaf3ff, #ffffff); }
+.hero h1 { font-size:36px; margin-bottom:10px; color:#0d4c6b; }
+.hero p { color:#555; margin-bottom:20px; }
+.card { background:white; padding:25px; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.05); text-align:center; max-width:400px; margin:40px auto; }
+.card img { width:150px; height:150px; border-radius:50%; object-fit:cover; margin-bottom:15px; }
+.card h3 { margin-bottom:8px; }
+.card p { margin-bottom:8px; font-size:14px; color:#555; }
+form { display:flex; flex-direction:column; gap:15px; margin-top:20px; }
+input, textarea { padding:10px; border-radius:8px; border:1px solid #ccc; font-size:14px; width:100%; }
+button { background:#0d4c6b; color:white; border:none; padding:12px; border-radius:8px; cursor:pointer; font-weight:600; font-size:16px; }
+footer { background:#0d4c6b; color:white; text-align:center; padding:25px; margin-top:50px; }
+</style>
+</head>
+<body>
+
+<header>
+  <img src="logo.png" alt="Grade Up Logo">
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="find-tutor.html">Find a Tutor</a>
+    <a href="become-tutor.html">Become a Tutor</a>
+    <a href="terms.html">Terms & Conditions</a>
+    <a href="contact.html">Contact Us</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Request Your Tutor</h1>
+  <p>Fill the form below to hire your selected tutor.</p>
+</section>
+
+<div id="tutor-container">
+  <!-- Tutor card and form will load here -->
+</div>
+
+<footer>
+  <p>© 2026 Grade Up | Lebanon</p>
+</footer>
+
+<script>
+// Get tutor name from URL
+const urlParams = new URLSearchParams(window.location.search);
+const tutorName = urlParams.get('tutor');
+
+fetch('tutors.json')
+  .then(res => res.json())
+  .then(tutors => {
+    const tutor = tutors.find(t => t.name === tutorName);
+    const container = document.getElementById('tutor-container');
+
+    if(tutor) {
+      container.innerHTML = `
+        <div class="card">
+          <img src="${tutor.photo}" alt="${tutor.name}">
+          <h3>${tutor.name}</h3>
+          <p><strong>Subjects:</strong> ${tutor.subjects}</p>
+          <p><strong>Class:</strong> ${tutor.class}</p>
+          <p><strong>Type:</strong> ${tutor.type}</p>
+
+          <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <input type="hidden" name="tutor" value="${tutor.name}">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="tel" name="phone" placeholder="Your Phone" required>
+            <textarea name="message" placeholder="Your Message / Details" rows="4"></textarea>
+            <button type="submit">Send Request</button>
+          </form>
+        </div>
+      `;
+    } else {
+      container.innerHTML = '<p style="text-align:center; padding:50px;">Tutor not found.</p>';
+    }
+  })
+  .catch(err => {
+    console.error('Error loading tutors.json:', err);
+    document.getElementById('tutor-container').innerHTML = '<p style="text-align:center; padding:50px;">Error loading tutor data.</p>';
+  });
+</script>
+
+</body>
+</html>

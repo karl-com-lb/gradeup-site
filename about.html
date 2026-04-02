@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>About Us | Grade Up</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #f4f7fb;
+  color: #1e2a38;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10%;
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+header img {
+  height: 70px;
+  transition: all 0.3s ease;
+}
+
+header.shrink {
+  padding: 8px 10%;
+}
+
+header.shrink img {
+  height: 45px;
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #1e2a38;
+  font-weight: 500;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 80px 10%;
+  background: linear-gradient(to right, #eaf3ff, #ffffff);
+}
+
+.hero h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+/* SECTION */
+.section {
+  padding: 70px 10%;
+}
+
+.center {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+  color: #555;
+}
+
+/* FOUNDER SECTION */
+.founder-section {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  max-width: 1000px;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.founder-section img {
+  width: 220px;
+  height: 220px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.founder-text h2 {
+  font-size: 28px;
+}
+
+.founder-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  color: #0d4c6b;
+  margin-bottom: 15px;
+}
+
+.founder-text p {
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Christina centered */
+.founder-centered {
+  text-align: center;
+  max-width: 700px;
+  margin: 60px auto 0;
+}
+
+/* CONTACT */
+.founder-contact {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.founder-contact a {
+  text-decoration: none;
+  color: #0d4c6b;
+  font-weight: 500;
+}
+
+.founder-contact span {
+  margin: 0 6px;
+  color: #888;
+}
+
+/* FOOTER */
+footer {
+  background: #0d4c6b;
+  color: white;
+  text-align: center;
+  padding: 25px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.footer-content img {
+  height: 40px;
+}
+
+.footer-content a {
+  color: white;
+  text-decoration: none;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <img src="logo.png">
+
+  <nav>
+    <a href="index.html">Home</a>
+   <a href="about.html">About Us</a>
+    <a href="find-tutor.html">Find a Tutor</a>
+    <a href="become-tutor.html">Become a Tutor</a>
+ 
+    <a href="terms.html">Terms & Conditions</a>
+ <a href="contact.html">Contact Us</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>About Grade Up</h1>
+  <p class="center">
+    A platform built by students, for students — modernizing tutoring in Lebanon.
+  </p>
+</section>
+
+<section class="section">
+  <h2 style="text-align:center;">Our Story</h2>
+  <p class="center">
+    Grade Up was created by students who experienced how difficult it is to find the right tutor. 
+    We built a platform where learning becomes simpler, more relatable, and more effective.
+  </p>
+</section>
+
+<section class="section">
+  <h2 style="text-align:center;">Our Mission</h2>
+  <p class="center">
+    To make high-quality education accessible and connect students with tutors who truly understand them.
+  </p>
+</section>
+
+<section class="section">
+  <h2 style="text-align:center;">Meet the Founders</h2>
+
+  <!-- Karl -->
+  <div class="founder-section">
+    <img src="karl.jpg" alt="Karl Karam">
+
+    <div class="founder-text">
+      <h2>Karl Karam</h2>
+      <div class="founder-title">Founder</div>
+
+      <p>
+        Karl Karam is a student passionate about technology and education. 
+        He founded Grade Up with the vision of transforming tutoring in Lebanon into a more modern, 
+        accessible, and student-centered experience. Karl is currently a Grade 10 student who felt the stress that students face when preparing for college in high school.
+      </p>
+
+      <div class="founder-contact">
+        <a href="mailto:karlkaram@gradeuplb.online">karlkaram@gradeuplb.online</a>
+        <span>|</span>
+        <a href="tel:+96170128909">+961 70 128 909</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Christina -->
+  <div class="founder-centered">
+    <h2>Christina El Rassy</h2>
+    <div class="founder-title">Founder</div>
+
+    <p>
+      Christina El Rassy brings strong academic insight and a deep understanding of student challenges. 
+      She plays a key role in ensuring that Grade Up delivers personalized, effective, and high-quality 
+      learning experiences for every student. Christina is currently a Mechanical Engineering student working on making learning for younger students more relatable.
+    </p>
+
+    <div class="founder-contact">
+      <a href="mailto:christinarassy@gradeuplb.online">christinarassy@gradeuplb.online</a>
+      <span>|</span>
+      <a href="tel:+96181893426">+961 81 893 426</a>
+    </div>
+  </div>
+
+</section>
+
+<section class="section">
+  <h2 style="text-align:center;">Meet the Team</h2>
+<p> Coming Soon... (Join Us!) </p>
+</section>
+
+<footer>
+  <div class="footer-content">
+    <img src="logo.png">
+    <a href="mailto:info@gradeuplb.online">info@gradeuplb.online</a>
+  </div>
+
+  <p>© 2026 Grade Up | Lebanon</p>
+</footer>
+
+<script>
+window.addEventListener("scroll", function () {
+  const header = document.querySelector("header");
+
+  if (window.scrollY > 50) {
+    header.classList.add("shrink");
+  } else {
+    header.classList.remove("shrink");
+  }
+});
+</script>
+
+</body>
+</html>
